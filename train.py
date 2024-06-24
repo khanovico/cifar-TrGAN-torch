@@ -82,6 +82,7 @@ def run_training(args):
     print('\n')
     
     # Dataset stup
+    print("dataset preparation\n")
     if dataset_path == 'CIFAR-10':
         (train_images, _), (_, _) = tf.keras.datasets.cifar10.load_data()
         train_images = train_images.astype('float32')
@@ -89,7 +90,8 @@ def run_training(args):
         train_dataset = create_cifar_ds(train_images, hparams['batch_size'], seed=train_seed)
     else:
         train_dataset = create_train_ds(dataset_path, hparams['batch_size'], seed=train_seed)
-              
+    
+    print("loss function initialization\n")
     if hparams['loss'] == 'bce':
         cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
         def discriminator_loss(real_img, fake_img):
@@ -128,6 +130,7 @@ def run_training(args):
     disc_loss_avg = tf.keras.metrics.Mean()
     gp_avg = tf.keras.metrics.Mean()
 
+    print("start training\n")
     @tf.function
     def train_step(real_images):
         noise = tf.random.normal([hparams['batch_size'], hparams['noise_dim']])
