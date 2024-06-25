@@ -1,6 +1,6 @@
-# TransGAN
+# TrGAN
 
-Implementation of the _Transformer-based GAN_ model:
+Generation of CIFAR10 images based on TrGAN (hands-on):
 
 ## Dependencies
 
