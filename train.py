@@ -1,5 +1,5 @@
 '''
-Author: Emilio Morales (mil.mor.mor@gmail.com)
+Author: khanovict
         Jun 2021
 '''
 import argparse

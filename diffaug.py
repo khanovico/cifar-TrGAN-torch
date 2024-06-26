@@ -1,4 +1,4 @@
-# Copyright (c) 2020, Shengyu Zhao, Zhijian Liu, Ji Lin, Jun-Yan Zhu, and Song Han
+# Copyright (c) 2020, Khanovict ai research platform
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
